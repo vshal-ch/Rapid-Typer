@@ -1,0 +1,26 @@
+{
+  "name": "rapid-typer",
+  "version": "1.0.0",
+  "description": "A Simple Web App where you can practice your Typing Skills and you will get to know your typing speed.",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vshal-ch/Rapid-Typer.git"
+  },
+  "keywords": [
+    "rapid-typer",
+    "typing",
+    "practice",
+    "typing",
+    "practice"
+  ],
+  "author": "Vishal ch",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vshal-ch/Rapid-Typer/issues"
+  },
+  "homepage": "https://github.com/vshal-ch/Rapid-Typer#readme"
+}

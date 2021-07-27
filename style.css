@@ -41,22 +41,41 @@ main .wrapper{
 
 .textarea{
     width: 90%;
-    max-width: 600px;
+    max-width: 200px;
     outline: none;
     background-color: transparent;
     border: 2px solid #333;
     padding: 1rem;
     border-radius: 5px;
     font-size: 1.5rem;
-    resize: none;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5em;
     overflow-y: hidden;
     font-family: serif;
     color:#111;
-    height: calc(55px + 0.5rem + 2rem + 4px);
 }
+
+.text-block{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    gap: 0.5em;
+    overflow-x: hidden;
+}
+
+.word{opacity: 0.5;position: relative;}
+
+.onscreen{opacity: 1;}
+
+.onscreen.correct::after{
+    content: attr(data-correct);
+    position: absolute;
+    top:0;
+    left:0;
+    color:greenyellow;
+}
+
+/* .correct{color:greenyellow} */
+
+.wrong{color:red}
 
 .wpm{
     display: block;
@@ -146,4 +165,13 @@ footer{
     align-items: center;
     gap: 0.7rem;
     margin-bottom: 0.7rem;
+}
+
+@media screen and (max-width: 480px) {
+    .input-block{
+        flex-direction: column;
+    }
+    .stop,.stopwatch{
+        padding: 0.5rem 1rem;
+    }
 }
