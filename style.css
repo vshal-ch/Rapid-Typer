@@ -34,7 +34,7 @@ header .wrapper{
 main .wrapper{
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 2rem;
     width: 100%;
     align-items: center
 }
@@ -46,7 +46,6 @@ main .wrapper{
     background-color: transparent;
     border: 2px solid #333;
     padding: 1rem;
-    border-radius: 5px;
     font-size: 1.5rem;
     overflow-y: hidden;
     font-family: serif;
@@ -149,6 +148,16 @@ main .wrapper{
     opacity: 1;
 }
 
+.generate-block{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+select{
+    border-radius: 0;
+}
+
 .generate{
     border: none;
     outline: none;
@@ -156,7 +165,6 @@ main .wrapper{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.2rem;
     padding: 0.6rem 1rem;
-    margin-top: 1rem;
     cursor: pointer;
 }
 
@@ -168,10 +176,20 @@ footer{
 }
 
 @media screen and (max-width: 480px) {
+    main .wrapper{
+        gap: 1.5rem;
+    }
     .input-block{
         flex-direction: column;
     }
     .stop,.stopwatch{
         padding: 0.5rem 1rem;
+    }
+    .generate-block{
+        flex-direction: column;
+    }
+
+    footer{
+        margin-top: 10px;
     }
 }

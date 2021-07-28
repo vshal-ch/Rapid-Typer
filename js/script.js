@@ -1,4 +1,4 @@
-import { newWords } from "./words.js";
+import { getArray as newWords } from "./words.js";
 import { startTimer, stopTimer, totalSeconds, resetTimer } from "./timer.js";
 
 const wordsField = document.querySelector(".text-block");
@@ -7,8 +7,9 @@ const timer = document.querySelector(".stopwatch");
 const wpmText = document.querySelector(".wpm");
 const stopBtn = document.querySelector(".stop");
 const generateBtn = document.querySelector(".generate");
+const sizeField = document.querySelector('.no-of-words');
 let timerStarted = false;
-let words = [...newWords];
+let words = [...newWords(50)];
 let results = [];
 
 function setWords(element, array) {
@@ -25,7 +26,7 @@ function setWords(element, array) {
   });
 }
 
-setWords(wordsField, newWords);
+setWords(wordsField, words);
 
 function removeFirst() {
   if (wordsField.querySelector(".word")) {
@@ -94,13 +95,15 @@ function showResults(seconds) {
 }
 
 function reset() {
+  let length = sizeField.value;
   timerStarted = false;
   resetTimer();
   wpmText.textContent = '0WPM';
   timer.textContent = '0:00';
   input.value = '';
   input.removeAttribute('disabled');
-  setWords(wordsField, newWords);
+  words = newWords(length);
+  setWords(wordsField, words);
 }
 
 function clickedStop() {

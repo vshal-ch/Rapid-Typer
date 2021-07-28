@@ -4,7 +4,40 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index,follow" />
+    <meta name="author" content="Vishal ch" />
+    <meta
+      name="description"
+      content="A Simple Website where you can practice your Typing Skills and you will get to know your typing speed."
+    />
+    <meta
+      name="keyworks"
+      content="rapid-typer, tying practice, fast typing, word per minutes, know wpm, random words"
+    />
+    <meta name="title" content="Rapid Typer | Practice your typing skills" />
+    <meta name="date" content="2021-07-28" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Rapid Typer | Practice your typing skills" />
+    <meta
+      name="twitter:description"
+      content="A Simple Website where you can practice your Typing Skills and you will get to know your typing speed."
+    />
+    <meta name="twitter:image" content="https://i.ibb.co/QJ9RY2r/logo.jpg" />
+    <meta property="og:title" content="Rapid Typer | Practice your typing skills" />
+    <meta property="og:site_name" content="Rapid Typer | Practice your typing skills" />
+    <meta property="og:url" content="https://rapid-typer.netlify.app" />
+    <meta
+      property="og:description"
+      content="A Simple Website where you can practice your Typing Skills and you will get to know your typing speed."
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:image"
+      content="https://i.ibb.co/QJ9RY2r/logo.jpg"
+    />
+    <link rel="canonical" href="https://rapid-typer.netlify.app" />
     <link rel="stylesheet" href="./style.css" />
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon" />
     <script src="./js/script.js" defer type="module"></script>
     <title>Rapid Typer</title>
   </head>
@@ -27,16 +60,33 @@
     </header>
     <main>
       <div class="wrapper">
+        <div class="generate-block">
+          <div class="select-block">
+            <label for="no-of-words">Number of words: </label>
+            <select name="no-of-words" class="no-of-words">
+              <option value="50">50</option>
+              <option value="100">100</option>
+              <option value="150">150</option>
+              <option value="200">200</option>
+            </select>
+          </div>
+          <button class="generate">GENERATE</button>
+        </div>
         <div class="textarea">
           <div class="text-block"></div>
         </div>
         <span class="wpm">0 WPM</span>
         <div class="input-block">
-          <input type="text" name="word" class="input" autofocus />
+          <input
+            type="text"
+            name="word"
+            class="input"
+            autofocus
+            placeholder="Type here"
+          />
           <p class="stopwatch">0:00</p>
           <button class="stop">STOP</button>
         </div>
-        <button class="generate">GENERATE</button>
       </div>
     </main>
     <footer>

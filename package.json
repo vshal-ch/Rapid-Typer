@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "A Simple Web App where you can practice your Typing Skills and you will get to know your typing speed.",
   "main": "script.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
